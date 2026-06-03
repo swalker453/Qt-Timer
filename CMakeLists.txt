@@ -30,8 +30,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         twodigitbox.h
         timerrc.qrc
         README.md
+        ico.rc
 
     )
+
+set_target_properties(Timer PROPERTIES
+   QT_ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Timer APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
